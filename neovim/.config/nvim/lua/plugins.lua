@@ -32,7 +32,21 @@ require('packer').startup(function()
     }
   }
 
-  use{'ervandew/supertab'}
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.opts)
+    end
+  }
+    
+  use {
+    'AckslD/nvim-whichkey-setup.lua',
+    requires = {'liuchengxu/vim-which-key'},
+    }
+  use {"ellisonleao/glow.nvim"}
+  use {'iamcco/markdown-preview.nvim'}
+  use {'ervandew/supertab'}
   use {'tpope/vim-vinegar'}
   use {'ctrlpvim/ctrlp.vim', config = [[require('config.ctrlp')]]}
   use {'neomake/neomake', config = [[require('config.neomake')]]}
@@ -43,7 +57,7 @@ require('packer').startup(function()
     {'apzelos/blamer.nvim'}
   }
 
-  use { 'neoclide/coc.nvim' }
+  use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
 
   use {
     {'rking/ag.vim'},
