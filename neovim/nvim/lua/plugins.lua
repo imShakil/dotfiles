@@ -7,31 +7,20 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 require('packer').startup(function()
+  use {'wbthomason/packer.nvim'}
   use {'ludwig/split-manpage.vim'}
-
   use {
-    {'lifepillar/vim-solarized8', config = [[require('config.theme')]]},
-    {'vim-airline/vim-airline', requires = {{'vim-airline/vim-airline-themes'}}, config = [[require('config.airline')]]},
-  }
-
-  use {
-    {
-      'scrooloose/nerdtree',
-      config = [[require('config.nerdtree')]]
-    },
-    {'jistr/vim-nerdtree-tabs'},
-    {'Xuyuanp/nerdtree-git-plugin'},
-    {
-      'tiagofumo/vim-nerdtree-syntax-highlight',
-      requires = {
-        {
-          'kyazdani42/nvim-web-devicons',
-          config = [[require('config.devicons')]]
+    "folke/which-key.nvim",
+    config = function()
+        require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
         }
-      }
+    end
     }
-  }
-
+  use {'lifepillar/vim-solarized8', config = [[require('config.theme')]]}
+ 
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -39,11 +28,24 @@ require('packer').startup(function()
         require'alpha'.setup(require'alpha.themes.startify'.opts)
     end
   }
-    
+
   use {
-    'AckslD/nvim-whichkey-setup.lua',
-    requires = {'liuchengxu/vim-which-key'},
-    }
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = [[require('config.lualine')]]
+  }
+  use {
+    'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = [[require('config.bufferline')]]
+  }
+
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    config = [[require('config.nvim-tree')]]
+  }
+
   use {"ellisonleao/glow.nvim"}
   use {'iamcco/markdown-preview.nvim'}
   use {'ervandew/supertab'}
@@ -57,7 +59,7 @@ require('packer').startup(function()
     {'apzelos/blamer.nvim'}
   }
 
-  use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+  use {'neoclide/coc.nvim', branch = 'release'}
 
   use {
     {'rking/ag.vim'},

@@ -2,7 +2,7 @@ local status, lspkind = pcall(require, "lspkind")
 if (not status) then return end
 
 lspkind.init({
-  with_text = true,
+  mode = 'symbol_text',
   preset = 'codicons',
   symbol_map = {
     Text = "",

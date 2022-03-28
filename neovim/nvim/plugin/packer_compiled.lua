@@ -79,10 +79,22 @@ _G.packer_plugins = {
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/ag.vim",
     url = "https://github.com/rking/ag.vim"
   },
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\2^\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\topts\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["blamer.nvim"] = {
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/apzelos/blamer.nvim"
+  },
+  ["bufferline.nvim"] = {
+    config = { "require('config.bufferline')" },
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     after_files = { "/home/imshakil/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
@@ -142,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/git-messenger.vim",
     url = "https://github.com/rhysd/git-messenger.vim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
   ["greplace.vim"] = {
     config = { "require('config.gsearch')" },
     loaded = true,
@@ -166,22 +183,22 @@ _G.packer_plugins = {
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
+  ["lualine.nvim"] = {
+    config = { "require('config.lualine')" },
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   neomake = {
     config = { "require('config.neomake')" },
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/neomake",
     url = "https://github.com/neomake/neomake"
-  },
-  nerdtree = {
-    config = { "require('config.nerdtree')" },
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/scrooloose/nerdtree"
-  },
-  ["nerdtree-git-plugin"] = {
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
-    url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
   },
   ["nvim-autopairs"] = {
     config = { "require('config.autopairs')" },
@@ -190,7 +207,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-nvim-lua", "cmp-buffer", "cmp_luasnip", "cmp-path" },
+    after = { "cmp-nvim-lua", "cmp-buffer", "cmp-path", "cmp_luasnip" },
     loaded = true,
     only_config = true
   },
@@ -204,6 +221,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tree.lua"] = {
+    config = { "require('config.nvim-tree')" },
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -221,10 +244,14 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
-    config = { "require('config.devicons')" },
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -247,31 +274,10 @@ _G.packer_plugins = {
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-airline"] = {
-    config = { "require('config.airline')" },
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
-    url = "https://github.com/vim-airline/vim-airline-themes"
-  },
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
-  },
-  ["vim-nerdtree-syntax-highlight"] = {
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight",
-    url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
-  },
-  ["vim-nerdtree-tabs"] = {
-    loaded = true,
-    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-nerdtree-tabs",
-    url = "https://github.com/jistr/vim-nerdtree-tabs"
   },
   ["vim-solarized8"] = {
     config = { "require('config.theme')" },
@@ -283,10 +289,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/vim-vinegar",
     url = "https://github.com/tpope/vim-vinegar"
+  },
+  ["which-key.nvim"] = {
+    config = { "\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
+    loaded = true,
+    path = "/home/imshakil/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neomake
+time([[Config for neomake]], true)
+require('config.neomake')
+time([[Config for neomake]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 require('config.telescope')
@@ -295,46 +311,50 @@ time([[Config for telescope.nvim]], false)
 time([[Config for nvim-cmp]], true)
 require('config.cmp')
 time([[Config for nvim-cmp]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
-require('config.devicons')
-time([[Config for nvim-web-devicons]], false)
--- Config for: vim-solarized8
-time([[Config for vim-solarized8]], true)
-require('config.theme')
-time([[Config for vim-solarized8]], false)
--- Config for: neomake
-time([[Config for neomake]], true)
-require('config.neomake')
-time([[Config for neomake]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 -- Config for: greplace.vim
 time([[Config for greplace.vim]], true)
 require('config.gsearch')
 time([[Config for greplace.vim]], false)
--- Config for: nerdtree
-time([[Config for nerdtree]], true)
-require('config.nerdtree')
-time([[Config for nerdtree]], false)
--- Config for: vim-airline
-time([[Config for vim-airline]], true)
-require('config.airline')
-time([[Config for vim-airline]], false)
--- Config for: ctrlp.vim
-time([[Config for ctrlp.vim]], true)
-require('config.ctrlp')
-time([[Config for ctrlp.vim]], false)
--- Config for: lspsaga.nvim
-time([[Config for lspsaga.nvim]], true)
-require('config.lsp-saga')
-time([[Config for lspsaga.nvim]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-require('config.lsp-config')
-time([[Config for nvim-lsp-installer]], false)
+-- Config for: vim-solarized8
+time([[Config for vim-solarized8]], true)
+require('config.theme')
+time([[Config for vim-solarized8]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config.nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\2^\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\topts\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 -- Config for: lspkind-nvim
 time([[Config for lspkind-nvim]], true)
 require('config.lsp-kind')
 time([[Config for lspkind-nvim]], false)
+-- Config for: ctrlp.vim
+time([[Config for ctrlp.vim]], true)
+require('config.ctrlp')
+time([[Config for ctrlp.vim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config.lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: lspsaga.nvim
+time([[Config for lspsaga.nvim]], true)
+require('config.lsp-saga')
+time([[Config for lspsaga.nvim]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('config.bufferline')
+time([[Config for bufferline.nvim]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+require('config.lsp-config')
+time([[Config for nvim-lsp-installer]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require('config.autopairs')
@@ -345,9 +365,9 @@ require('config.lsp-color')
 time([[Config for lsp-colors.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd cmp_luasnip ]]
-vim.cmd [[ packadd cmp-nvim-lua ]]
 vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-nvim-lua ]]
+vim.cmd [[ packadd cmp_luasnip ]]
 vim.cmd [[ packadd cmp-buffer ]]
 time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
@@ -355,5 +375,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
